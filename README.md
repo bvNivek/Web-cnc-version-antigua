@@ -1,5 +1,5 @@
 # Web-version-antigua
-Versión antigua, incompleta - Legacy - Estructura por componentes
+Versión antigua, incompleta - Estructura por componentes
 ## Video demo (OBS)
 Recorrido completo:
 https://youtu.be/eYDa6JCFkNc
