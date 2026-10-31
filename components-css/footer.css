@@ -1,0 +1,146 @@
+.footer {
+    background-color: #0a0a0a;
+    color: #cccccc;
+    padding: 40px 5%;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== LADO IZQUIERDO ===== */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #7b2ff7, #00c6ff);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.footer-logo-text span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer-logo-text small {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+.footer-copyright,
+.footer-company {
+    margin: 0;
+    font-size: 13px;
+    color: #999999;
+}
+
+/* ===== LADO DERECHO ===== */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-social a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.25s ease;
+}
+
+.footer-social a:hover {
+    color: #ffffff;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.footer-nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.footer-legal a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
+
+.footer-legal span {
+    color: #666666;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+    }
+
+    .footer-nav {
+        justify-content: flex-start;
+    }
+}

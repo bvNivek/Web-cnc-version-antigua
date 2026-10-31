@@ -1,0 +1,577 @@
+/* =========================================================
+   HOME.CSS – Versión optimizada
+   ========================================================= */
+
+/* ---------- Utilidad: cuadrícula técnica ---------- */
+.grid-bg {
+    background-image:
+        linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 10px 10px, 10px 10px, 40px 40px, 40px 40px;
+}
+
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+
+.hero {
+    padding: 35px 8% 0;
+    position: relative;
+}
+
+.hero-main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    min-height: 440px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-subtitle {
+    color: var(--color-orange);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: var(--color-text);
+    font-size: clamp(55px, 6vw, 95px);
+    line-height: .9;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   2. IMAGEN DEL HERO
+   ========================================================= */
+
+.hero-image {
+    width: 40%;
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-background-secondary);
+    border: 1px solid rgba(255,255,255,.035);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to bottom, transparent 65%, rgba(7,27,47,.65)),
+        linear-gradient(to right, rgba(7,27,47,.15), transparent 20%, transparent 80%, rgba(7,27,47,.15));
+}
+
+.hero-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   3. SERVICIOS DEL HERO
+   ========================================================= */
+
+.hero-data {
+    display: flex;
+    gap: 30px;
+}
+
+.hero-data span {
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   3. SERVICIOS DEL HERO
+   ========================================================= */
+.hero-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.hero-service {
+    min-height: 140px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    
+    /* Fondo un poco más blanco pero sigue transparente */
+    background: var(--panel-background);
+    
+    /* Borde más sutil y limpio */
+   border: 1px solid var(--border-light);
+    
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Sin efectos de hover */
+.hero-service:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: none;
+}
+
+.service-number {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: var(--color-orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.service-title {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   4. INFORMACIÓN TÉCNICA
+   ========================================================= */
+
+.hero-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+    padding: 25px 0;
+    /* Sin raya */
+    border-top: none;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.hero-info div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--color-blue);
+}
+
+.hero-info span {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-info strong {
+    color: var(--color-text);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   5. POR QUÉ TRABAJAR CON NOSOTROS
+   ========================================================= */
+
+.home-features {
+    margin-top: 100px;
+    padding: 80px 8% 100px;
+}
+
+.features-header {
+    max-width: 700px;
+    margin-bottom: 70px;
+}
+
+.section-subtitle {
+    color: var(--color-orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.features-header h2 {
+    color: var(--color-text);
+    font-size: clamp(35px, 4vw, 60px);
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   FEATURES – Diseño compacto y diferenciado
+   ========================================================= */
+
+.features-intro {
+    max-width: 680px;
+    margin-bottom: 60px;
+}
+
+.features-intro h2 {
+    color: var(--color-text);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 13px 26px;
+    background: var(--color-orange);
+    color: var(--color-background);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--color-text);
+    transform: translateY(-2px);
+}
+
+/* ---------- Grid de las 3 cards ---------- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ---------- Estilo base de las cards ---------- */
+.feature-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .3s ease, transform .3s ease, background .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    border-color: rgba(232, 117, 34, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    color: var(--color-orange);
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    color: var(--color-text);
+    font-size: 22px;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+}
+
+.feature-card p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+/* ---------- Card 1: Lista ---------- */
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.card-list li {
+    color: var(--color-text);
+    font-size: 13.5px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    padding-left: 16px;
+}
+
+.card-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-size: 12px;
+}
+
+.card-list li:last-child {
+    border-bottom: none;
+}
+
+/* ---------- Card 2: Número grande ---------- */
+.precision-number {
+    margin: 10px 0 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.precision-number span {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.precision-number small {
+    font-size: 18px;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
+/* ---------- Card 3: Mini timeline ---------- */
+.mini-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 25px;
+    position: relative;
+}
+
+.mini-timeline::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.step span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-background);
+    border: 1.5px solid var(--color-orange);
+    color: var(--color-orange);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step p {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Footer de cada card ---------- */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.card-data {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-text);
+}
+
+.card-link {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-orange);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.card-link:hover {
+    color: var(--color-text);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 28px 24px;
+    }
+
+    .precision-number span {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-features {
+        padding: 60px 5% 80px;
+    }
+
+    .features-intro h2 {
+        font-size: 28px;
+    }
+
+    .intro-text {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   6. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 6% 0;
+    }
+
+    .hero-main {
+        flex-direction: column;
+        gap: 35px;
+        min-height: auto;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 320px;
+    }
+
+    .hero-services {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-features {
+        padding: 60px 6% 80px;
+    }
+
+    .feature-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .feature-block-reverse {
+        direction: ltr;
+    }
+
+    .feature-content {
+        max-width: none;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-inline: 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-data {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-info {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-content h3 {
+        font-size: 30px;
+    }
+
+    .feature-image {
+        height: 250px;
+    }
+}

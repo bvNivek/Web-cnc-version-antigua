@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comercializadora</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../components-css/navbar.css">
+    <link rel="stylesheet" href="../../components-css/footer.css">
+    <link rel="stylesheet" href="../../pages-css/servicios-secciones.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <!-- =====================================================
+         CONTENIDO
+         ===================================================== -->
+    <main class="maquinados-page">
+
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
+        <section class="maquinados-header">
+            <span class="maquinados-label">SERVICIOS INDUSTRIALES</span>
+            <h1>COMERCIALIZADORA</h1>
+            <p>Suministro de materiales y componentes industriales</p>
+
+            <div class="maquinados-line">
+                <span></span>
+            </div>
+        </section>
+
+        <a href="../servicios.html" class="btn-regresar" id="btn-regresar">
+            <span class="flecha">←</span>
+            <span class="texto">Volver</span>
+        </a>
+
+        <!-- =================================================
+             TARJETAS (3 APARTADOS)
+             ================================================= -->
+        <section class="maquinados-carousel">
+
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+
+            <div class="maquinados-track-wrapper">
+                <div class="maquinados-track">
+
+                    <!-- 01 -->
+                    <article class="maquinado-card" data-id="1">
+                        <div class="maquinado-image">
+                            <img src="../../img/comercializadora/materiales1.png" alt="Materiales industriales" loading="lazy">
+                        </div>
+                        <div class="maquinado-content">
+                            <div class="maquinado-divider"></div>
+                            <h2>MATERIALES INDUSTRIALES</h2>
+                            <p class="maquinado-desc">Resultado: Suministro de aceros, aluminios y aleaciones.</p>
+                            <div class="maquinado-specs">
+                                <div class="maquinado-divider"></div>
+                                <span>ENTREGA: 3–7 días hábiles</span>
+                                <span>INCLUYE: Certificados de calidad</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 02 -->
+                    <article class="maquinado-card" data-id="2">
+                        <div class="maquinado-image">
+                            <img src="../../img/comercializadora/componentes1.png" alt="Componentes y refacciones" loading="lazy">
+                        </div>
+                        <div class="maquinado-content">
+                            <div class="maquinado-divider"></div>
+                            <h2>COMPONENTES Y REFACCIONES</h2>
+                            <p class="maquinado-desc">Resultado: Piezas y refacciones para maquinaria industrial.</p>
+                            <div class="maquinado-specs">
+                                <div class="maquinado-divider"></div>
+                                <span>ENTREGA: 2–5 días hábiles</span>
+                                <span>DISPONIBILIDAD: Stock permanente</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 03 -->
+                    <article class="maquinado-card" data-id="3">
+                        <div class="maquinado-image">
+                            <img src="../../img/comercializadora/herramientas1.png" alt="Herramientas y equipos" loading="lazy">
+                        </div>
+                        <div class="maquinado-content">
+                            <div class="maquinado-divider"></div>
+                            <h2>HERRAMIENTAS Y EQUIPOS</h2>
+                            <p class="maquinado-desc">Resultado: Herramientas de corte, medición y equipos especiales.</p>
+                            <div class="maquinado-specs">
+                                <div class="maquinado-divider"></div>
+                                <span>ENTREGA: 4–8 días hábiles</span>
+                                <span>INCLUYE: Asesoría técnica</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Siguiente">›</button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ====================== MODAL DE PRODUCTO ====================== -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-overlay"></div>
+
+        <div class="product-modal-content">
+            <button class="modal-close" aria-label="Cerrar">×</button>
+
+            <div class="modal-body">
+                <!-- Imagen grande -->
+                <div class="modal-image">
+                    <div class="modal-loader" id="modalLoader">
+                        <div class="spinner"></div>
+                    </div>
+                    <img src="" alt="" id="modalMainImage">
+                </div>
+
+                <!-- Información -->
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+
+                    <div class="modal-specs">
+                        <div class="spec">
+                            <span class="spec-label">Material</span>
+                            <span class="spec-value" id="modalMaterial"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Tolerancia</span>
+                            <span class="spec-value" id="modalTolerance"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Acabado</span>
+                            <span class="spec-value" id="modalFinish"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <a href="#" class="btn-secondary">Hablar con un técnico</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galería inferior -->
+            <div class="modal-gallery" id="modalGallery">
+                <!-- Las miniaturas se llenan con JS -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+    <script src="../../components-js/navbar.js"></script>
+    <script src="../../components-js/components.js"></script>
+
+    <!-- Carrusel + Modal de esta página -->
+    <script src="../../pages-js/servicios-secciones/comercializadora/comercializadora.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,660 @@
+/* =========================================================
+   MAQUINADOS
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.maquinados-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 6% 70px;
+    position: relative; /* necesario para el botón absoluto */
+}
+
+
+/* =========================================================
+   BOTÓN REGRESAR
+   ========================================================= */
+
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 28px;                 /* debajo del logo / navbar */
+    left: 6%;                  /* alineado con el padding de la página */
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+    z-index: 20;
+}
+
+.btn-regresar:hover {
+    background: rgba(255, 140, 0, 0.15);
+    border-color: rgba(255, 140, 0, 0.45);
+    color: #ff8c00;
+    transform: translateX(-3px);
+}
+
+.btn-regresar .flecha {
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
+}
+
+.btn-regresar:hover .flecha {
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.maquinados-header {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px; /* un poco de espacio extra por el botón */
+}
+
+.maquinados-label {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--color-orange);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.maquinados-header h1 {
+    color: var(--color-text);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 0.95;
+}
+
+.maquinados-header p {
+    margin-top: 18px;
+    color: var(--color-text-secondary);
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   LINEA TECNICA
+   ========================================================= */
+
+.maquinados-line {
+    position: relative;
+    width: min(650px, 80%);
+    height: 30px;
+    margin: 12px auto 0;
+}
+
+.maquinados-line::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-blue-soft),
+        transparent
+    );
+    opacity: 0.65;
+}
+
+.maquinados-line::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translateX(-50%);
+    border: 1px solid var(--color-blue-soft);
+    border-radius: 50%;
+    background: var(--color-background);
+}
+
+
+/* =========================================================
+   CARRUSEL
+   ========================================================= */
+
+.maquinados-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 10px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.maquinados-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.maquinados-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.4s ease;
+}
+
+/* Cada tarjeta ocupa 1/3 del espacio visible */
+.maquinado-card {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 260px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.maquinado-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 140, 0, 0.25);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Zona de la imagen */
+.maquinado-image {
+    background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px 16px;
+    min-height: 220px;
+}
+
+.maquinado-image img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+    border-radius: 8px;
+}
+
+/* Contenido de la tarjeta */
+.maquinado-content {
+    background: transparent;
+    color: #ffffff;
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.maquinado-content h2 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.maquinado-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin-bottom: 0.8rem;
+}
+
+/* Specs */
+.maquinado-specs {
+    color: #ff7a1a;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.maquinado-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 1px;
+    margin: 0.7rem 0;
+}
+
+/* Flechas del carrusel */
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.6rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+    backdrop-filter: blur(8px);
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 140, 0, 0.15);
+    border-color: rgba(255, 140, 0, 0.45);
+    color: #ff8c00;
+    transform: scale(1.08);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.product-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.product-modal-content {
+    position: relative;
+    background: #141414;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 980px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    z-index: 1;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.product-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.product-modal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+.product-modal-content::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 5;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #e67e22;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Imagen principal del modal */
+.modal-image {
+    position: relative;
+    background: #0d0d0d;
+    border-radius: 12px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Loader */
+.modal-loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d0d0d;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.modal-loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #333;
+    border-top-color: #e67e22;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#modalMainImage {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+#modalMainImage.loaded {
+    opacity: 1;
+}
+
+.modal-info h2 {
+    margin: 0 0 12px;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.modal-info p {
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.modal-specs {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.spec-label {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.spec-value {
+    font-weight: 600;
+    color: #e67e22;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-secondary {
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+}
+
+/* Galería inferior */
+.modal-gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-top: 10px;
+}
+
+.modal-gallery img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.7;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.modal-gallery img:hover,
+.modal-gallery img.active {
+    border-color: #e67e22;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   MODAL DE VIDEO
+   ========================================================= */
+
+.video-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.video-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+}
+
+.video-modal-overlay.active .video-modal-content {
+    transform: scale(1);
+}
+
+.video-modal-content video {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 80vh;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.video-modal-close:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Thumb de video */
+.video-thumb {
+    position: relative;
+    width: 90px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.video-thumb:hover {
+    border-color: #e67e22;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-thumb .play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumb .play-icon {
+    font-size: 22px;
+    color: white;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .maquinado-card {
+        flex: 0 0 calc(50% - 12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .maquinados-page {
+        padding: 80px 4% 80px;
+    }
+
+    .btn-regresar {
+        top: 20px;
+        left: 4%;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .maquinado-card {
+        flex: 0 0 calc(85% - 12px);
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
+    }
+
+    .product-modal-content {
+        width: 94%;
+        padding: 28px 20px;
+        max-height: 92vh;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .modal-image {
+        min-height: 240px;
+    }
+
+    .modal-image img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .maquinado-card {
+        flex: 0 0 90%;
+    }
+
+    .maquinado-image {
+        min-height: 180px;
+        padding: 20px 16px 12px;
+    }
+
+    .maquinado-image img {
+        max-height: 180px;
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Empresa</title>
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="../pages-css/contacto.css">
+    <link rel="stylesheet" href="../components-css/navbar.css">
+    <link rel="stylesheet" href="../components-css/footer.css">
+
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+    <main class="contacto-page">
+
+        <!-- ===================== CONTACTO ===================== -->
+        <section class="contacto-section">
+            <div class="contacto-container">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="contacto-main">
+
+                    <div class="contacto-heading">
+                        <h1>Háblanos</h1>
+                        <p>Cuéntanos sobre tu proyecto y encontraremos la mejor solución.</p>
+                    </div>
+
+                    <form class="contacto-form" id="contactoForm">
+
+                        <!-- FILA 1 -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">
+                                    <span class="label-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <circle cx="12" cy="8" r="3"></circle>
+                                            <path d="M5 20c.8-3.5 3.1-5 7-5s6.2 1.5 7 5"></path>
+                                        </svg>
+                                    </span>
+                                    Nombre
+                                </label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="empresa">
+                                    <span class="label-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4 21V6h16v15"></path>
+                                            <path d="M8 6V3h8v3"></path>
+                                            <path d="M8 10h2"></path>
+                                            <path d="M14 10h2"></path>
+                                            <path d="M8 14h2"></path>
+                                            <path d="M14 14h2"></path>
+                                            <path d="M10 21v-4h4v4"></path>
+                                        </svg>
+                                    </span>
+                                    Empresa
+                                </label>
+                                <input type="text" id="empresa" name="empresa" placeholder="Nombre de empresa" autocomplete="organization">
+                            </div>
+                        </div>
+
+                        <!-- FILA 2 -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">
+                                    <span class="label-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M6.5 3.5l3 3-2 2c1.3 2.8 3.2 4.7 6 6l2-2 3 3-2 3c-.5.5-1.3.7-2 .5-7.2-1.8-11.2-5.8-13-13-.2-.7 0-1.5.5-2l2.5-2.5z"></path>
+                                        </svg>
+                                    </span>
+                                    Teléfono
+                                </label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+52" autocomplete="tel">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="correo">
+                                    <span class="label-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                            <path d="M4 7l8 6 8-6"></path>
+                                        </svg>
+                                    </span>
+                                    Correo
+                                </label>
+                                <input type="email" id="correo" name="correo" placeholder="correo@empresa.com" autocomplete="email">
+                            </div>
+                        </div>
+
+                        <!-- SERVICIO -->
+                        <div class="form-group form-group-full">
+                            <label for="servicio">
+                                <span class="label-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 7h16"></path>
+                                        <path d="M4 12h16"></path>
+                                        <path d="M4 17h16"></path>
+                                        <circle cx="9" cy="7" r="2"></circle>
+                                        <circle cx="15" cy="12" r="2"></circle>
+                                        <circle cx="11" cy="17" r="2"></circle>
+                                    </svg>
+                                </span>
+                                ¿En qué podemos ayudarte?
+                            </label>
+                            <select id="servicio" name="servicio">
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="maquinados">Maquinados CNC</option>
+                                <option value="comercializadora">Comercializadora</option>
+                                <option value="proyectos">Desarrollo de proyectos</option>
+                                <option value="cotizacion">Solicitar cotización</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <!-- MENSAJE -->
+                        <div class="form-group form-group-full">
+                            <label for="mensaje">
+                                <span class="label-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 5h16v11H8l-4 4V5z"></path>
+                                    </svg>
+                                </span>
+                                Mensaje
+                            </label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu proyecto..." rows="7"></textarea>
+                        </div>
+
+                        <button type="submit" class="contacto-submit">
+                            <span>Enviar mensaje</span>
+                            <span class="submit-arrow">→</span>
+                        </button>
+
+                        <p class="form-notice">
+                            Tu información será utilizada únicamente para atender tu solicitud.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <aside class="contacto-sidebar">
+
+                    <div class="whatsapp-content">
+                        <a href="#" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+                            <div class="whatsapp-button-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"></path>
+                                    <path d="M8.5 9.5c.3 2 2 3.7 4 4"></path>
+                                    <path d="M8.5 9.5c.2-.5.5-1 .8-1.3"></path>
+                                    <path d="M12.5 13.5c.4.1 1 .1 1.5-.1"></path>
+                                </svg>
+                            </div>
+                            <div class="whatsapp-button-divider"></div>
+                            <div class="whatsapp-button-text">
+                                <strong>Háblanos por WhatsApp</strong>
+                                <span>Resolveremos tus dudas</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M6.5 3.5l3 3-2 2c1.3 2.8 3.2 4.7 6 6l2-2 3 3-2 3c-.5.5-1.3.7-2 .5-7.2-1.8-11.2-5.8-13-13-.2-.7 0-1.5.5-2l2.5-2.5z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <span>TELÉFONO</span>
+                                <p>+52 XXX XXX XXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <path d="M4 7l8 6 8-6"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <span>CORREO</span>
+                                <p>correo@empresa.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
+                                    <circle cx="12" cy="9" r="2.5"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <span>UBICACIÓN</span>
+                                <p>Puebla, México</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="8"></circle>
+                                    <path d="M12 7v5l3 2"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <span>HORARIO</span>
+                                <p>Lunes a Viernes<br>8:00 - 18:00 hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacto-sidebar-footer">
+                        <span class="footer-star">✦</span>
+                        <span>Precisión que impulsa tu producción.</span>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- ===================== UBICACIÓN ===================== -->
+        <section class="contacto-location">
+            <div class="location-container">
+
+                <div class="location-heading">
+                    <span class="location-label">UBICACIÓN</span>
+                    <h2>¿Dónde estamos?</h2>
+                </div>
+
+                <div class="location-map">
+                    <div class="location-card">
+                        <span class="location-card-label">NUESTRA UBICACIÓN</span>
+                        <h3>Puebla, México</h3>
+                        <p>Visítanos o contáctanos para conocer más sobre nuestros servicios.</p>
+                        <a href="#" class="location-link">Cómo llegar</a>
+                    </div>
+
+                    <div class="location-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="location-bottom-info">
+                        <span>UBICACIÓN</span>
+                        <strong>PUEBLA, MÉXICO</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+     <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Contenido de la página -->
+    <main>
+        ...
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts al final -->
+    <script src="../components-js/components.js"></script>
+    <script src="../components-js/navbar.js"></script>
+
+</body>
+</html>

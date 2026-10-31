@@ -1,0 +1,103 @@
+/* =========================================================
+   VARIABLES GLOBALES
+   ========================================================= */
+
+:root {
+    --color-background: #03060a;
+    --color-background-secondary: #172532;
+
+    --color-blue: #2D6F95;
+    --color-blue-soft: #3E87AD;
+
+    --color-orange: #E87522;
+    --color-orange-soft: #F19A58;
+    --color-orange-dark: #B95718;
+
+    --color-text: #F2F4F5;
+    --color-text-secondary: #AAB5BD;
+
+    /* Cuadrícula */
+    --grid-small: rgba(255, 255, 255, 0.025);
+    --grid-large: rgba(255, 255, 255, 0.045);
+
+    /* Paneles */
+    --border-light: rgba(242, 244, 245, 0.12);
+    --border-dark: rgba(170, 181, 189, 0.18);
+
+    --panel-background: rgba(23, 37, 50, 0.22);
+    --panel-background-dark: rgba(3, 6, 10, 0.72);
+
+    /* Animaciones */
+    --transition: 0.35s ease;
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--color-background);
+
+    color: var(--color-text);
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    /*
+       DOBLE CUADRÍCULA
+       - 12px = pequeña
+       - 60px = grande
+    */
+
+    background-image:
+        linear-gradient(
+            var(--grid-small) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--grid-small) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            var(--grid-large) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--grid-large) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        12px 12px,
+        12px 12px,
+        60px 60px,
+        60px 60px;
+
+    background-attachment: fixed;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+}
