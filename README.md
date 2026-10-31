@@ -1,4 +1,4 @@
-# Web-cnc-version-antigua
+# Web-version-antigua
 Versión antigua, incompleta - Legacy - Estructura por componentes
 ## Video demo (OBS)
 Recorrido completo:
